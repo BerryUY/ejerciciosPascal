@@ -23,6 +23,7 @@ begin
     write('Ingrese un entero de 1 digito: ');
     readln(d);
 
+    { validar si el espacio del entero es = d}
     if (n DIV 1000 = d) then found := true;
     if ((n MOD 1000) DIV 100 = d) then found := true;
     if ((n MOD 100) DIV 10 = d) then found := true;
@@ -33,10 +34,10 @@ begin
     if found then 
         begin
             if (n DIV 1000 = d) then write('+') else write(' ');
-            if ((n MOD 1000) DIV 100 = d) then write('+') else write(' ');
+            if ((n MOD 1000) DIV 100 = d) then write('+') else write(' '); { ej: 1234 MOD 1000 = 234 -> 234 DIV 100 = 2 }
             if ((n MOD 100) DIV 10 = d) then write('+') else write(' ');
-            if (n MOD 10 = d) then write('+') else write(' ');
-            writeln;
+            if (n MOD 10 = d) then write('+') else write(' '); { 1234 MOD 10 = 4 }
+            writeln; { br adicional para formatear bien el contenido }
         end
     else 
         writeln('d no aparece en n');
