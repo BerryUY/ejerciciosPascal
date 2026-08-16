@@ -17,3 +17,32 @@ Ingrese numero positivo hexadecimal de 3 cifras: 7EB
 Hexadecimal 7EB = Decimal 2027
 
 }
+
+program ej13;
+var
+  a, b, c: char;
+  va, vb, vc: integer;
+  decimal: integer;
+begin
+  write('Ingrese numero positivo hexadecimal de 3 cifras: ');
+  readln(a, b, c);
+
+  if (a >= '0') and (a <= '9') then
+    va := ord(a) - ord('0')
+  else
+    va := ord(a) - ord('A') + 10;
+
+  if (b >= '0') and (b <= '9') then
+    vb := ord(b) - ord('0')
+  else
+    vb := ord(b) - ord('A') + 10;
+
+  if (c >= '0') and (c <= '9') then
+    vc := ord(c) - ord('0')
+  else
+    vc := ord(c) - ord('A') + 10;
+
+  decimal := va * 16 * 16 + vb * 16 + vc;
+
+  writeln('Hexadecimal ', a, b, c, ' = Decimal ', decimal);
+end.
