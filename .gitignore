@@ -1,2 +1,10 @@
-p3/*
-!p3/*.pas
+# Ignorar todo por defecto...
+*
+# ...menos los directorios (para poder recorrerlos)
+!*/
+# ...los fuentes Pascal
+!*.pas
+# ...y los archivos propios del repo
+!.gitignore
+!readme.md
+!run.sh

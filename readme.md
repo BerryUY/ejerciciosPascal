@@ -2,7 +2,16 @@
 
 Ejercicios en Pascal (FPC).
 
-## Compilar
+## Compilar y ejecutar
+
+Con el script `run.sh`: compila con los chequeos extra y ejecuta, borrando el binario y el `.o` al terminar.
+
+```bash
+./run.sh p4/ejercicio1b       # con o sin extensión .pas
+./run.sh p4/ejercicio1b.pas
+```
+
+### Manual
 
 ```bash
 fpc ejercicio.pas
@@ -18,7 +27,7 @@ fpc -Cr -Co -Miso ejercicio.pas
 - `-Co`: chequeo de overflow
 - `-Miso`: modo ISO Pascal estricto
 
-## Ejecutar
+Ejecutar:
 
 ```bash
 ./ejercicio
