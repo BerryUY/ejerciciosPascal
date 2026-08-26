@@ -14,7 +14,7 @@ if ((1 <= m) and (m <= 10) and (1 <= n) and (n <= 10) and (n > m)) then
             for i:=m to n do
             begin
                 writeln('>>> Tabla', i ,' <<<');
-                for j:=i to 10 do
+                for j:=1 to 10 do
                 begin
                     res := j * i;
                     writeln(j,' * ',i,' = ',res);
@@ -28,5 +28,3 @@ if ((1 <= m) and (m <= 10) and (1 <= n) and (n <= 10) and (n > m)) then
             writeln('m no puede ser mayor que n');
         end
 end.
-
-// fix: arranca desde el i y no desde el 1 la tabla de multiplicar
