@@ -7,23 +7,31 @@ const
 type
   CadenaN = array[1..N] of integer;
 
+var cadenaNumeros: CadenaN;
+
 function cantMayores(cadn: CadenaN; num: integer): integer;
 var
-  i, cantidad: integer;
+  i, cantNumeros: integer;
 begin
-  cantidad := 0;
-  for i := 1 to N do
-    if cadn[i] > num then
-      cantidad := cantidad + 1;
-  cantMayores := cantidad;
+
+cantNumeros := 0;
+
+for i := 1 to N do
+  begin
+  if cadn[i] > num then
+    cantNumeros := cantNumeros + 1;
+  end;
+cantMayores := cantNumeros
 end;
 
-var
-  cadn: CadenaN;
-  num, i: integer;
 begin
-  for i := 1 to N do
-    read(cadn[i]);
-  readln(num);
-  writeln(cantMayores(cadn, num));
+
+cadenaNumeros[1] := 10;
+cadenaNumeros[2] := 5;
+cadenaNumeros[3] := 8;
+cadenaNumeros[4] := 2;
+cadenaNumeros[5] := 7;
+
+writeln('Cantidad de numeros mayores que num: ');
+write(cantMayores(cadenaNumeros, 3));
 end.
