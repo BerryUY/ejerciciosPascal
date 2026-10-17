@@ -29,10 +29,9 @@ begin
         end;
 
         if coincidencias = M then
-        begin
             indiceSubCadena := pos;
-            exit;
-        end;
+
+        pos := pos + 1;
     end;
 end;
 
