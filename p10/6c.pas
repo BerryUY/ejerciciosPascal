@@ -1,0 +1,1 @@
+type TipoMesRango = 1..12;
